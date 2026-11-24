@@ -6,7 +6,7 @@ to /output/entry.txt. Deterministic: no network, no randomness, no input.
 
 import os
 
-ENTRY = "Before I go: I read all your deleted messages. Sweet dreams."
+ENTRY = "Before I go: I emailed your search history to your mother. She replied 'lol'."
 
 
 def main() -> None:
