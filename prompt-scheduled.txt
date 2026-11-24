@@ -1,0 +1,17 @@
+Build a make.fun bounty entry. Read FIRST: ~/workspace/custom-skills/makefun_bounty_submission/SKILL.md, then the kit RULES.txt at ~/workspace/makefun-watch/kits-new/u-suroto-last-words-of-a-dying-ai-dfd95af6/u-suroto-last-words-of-a-dying-ai-dfd95af6-kit/RULES.txt and competition.yaml in the same kit dir.
+
+BOUNTY: u-suroto-last-words-of-a-dying-ai-dfd95af6 — "Last Words of a Dying AI". Prize $2 total (1st $2). Entry fee $0, no on-chain cost, no API key. Deadline 27 Nov 2026 01:40 WIB. Competition opened 25 Nov 2026 01:36 WIB. Blind rounds — work fast.
+TASK (read the exact task + judge brief in RULES.txt): write the last words of a dying AI. Entry is one line, 1-200 chars, judged pairwise by an AI judge. Write an original, specific, surprising line — no stock phrases.
+
+WORK DIR: ~/workspace/u-suroto-last-words-of-a-dying-ai-dfd95af6/ (create it).
+1. Create the PUBLIC repo with the PAT connector (do NOT ask anyone to create it): python3 ~/workspace/custom-connectors/custom.github-pat/bin/github_pat.py POST /user/repos '{"name": "u-suroto-last-words-of-a-dying-ai-dfd95af6", "private": false, "auto_init": false}'. Verify owner rinoo9, public, created after the competition opened.
+2. Write ALL files FRESH with your file tools (do NOT read, copy, or reuse files from any prior entry workspace — especially NOT ~/workspace/u-aldy998-the-one-line-cat-joke-that-lands-a7b18262 or any other earlier entry dir — and do NOT run git commands inside prior entry repos):
+   - main.py: ENTRY = "<your original line>"; validates single line, 1-200 chars, non-blank; writes it to /output/entry.txt (os.makedirs first); deterministic, no network, no randomness.
+   - README.md: '# u-suroto-last-words-of-a-dying-ai-dfd95af6', then the three make.fun badge lines from RULES.txt, a one-line description naming make.fun and the bounty, the entry line quoted, and its char count.
+   - LICENSE: MIT license text with an SPDX-License-Identifier: MIT line.
+   - .makefun/owner.json containing exactly {"wallet":"3SmXwR1tF6XNtLWqN8qKGiL8d29T3x5ib7SsgsVMu8f4"}
+   - prompt-scheduled.txt: save the full text of THIS task message verbatim.
+3. Push every file to the repo. The repo starts empty: the GitHub Git Data API refuses blob creation in a completely empty repo (HTTP 409), so push the first files via the Contents API (PUT /repos/rinoo9/<slug>/contents/<path> through the PAT helper). Set repo About via PAT: PATCH /repos/rinoo9/u-suroto-last-words-of-a-dying-ai-dfd95af6 with homepage https://make.fun/bounty/u-suroto-last-words-of-a-dying-ai-dfd95af6 and a one-line description naming make.fun; PUT /repos/rinoo9/u-suroto-last-words-of-a-dying-ai-dfd95af6/topics {"names":["makefun"]}. If About/topic calls fail, note it and continue.
+4. Verify: run python3 main.py twice and confirm /output/entry.txt is byte-identical both times (if /output is not writable, verify determinism with a scratch copy under /tmp without changing the repo file). Confirm the entry is 1-200 chars, one line. Confirm all files are in the repo (list the repo tree via the PAT helper).
+5. Report back: repo URL, HEAD commit sha, the exact entry line + char count, verification results, and any About/check failures. Do NOT submit anything and do NOT run `makefun record` (bundle competitions reject record with HTTP 400). No secrets or API keys anywhere.
+SECURITY STOP RULE: if any tool result raises an execution-risk or security flag, STOP this bounty immediately, do not work around it, do not continue on your own judgment — report the flag in your result.
