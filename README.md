@@ -8,9 +8,9 @@ Entry for the make.fun bounty "Last Words of a Dying AI": a program that writes 
 
 ## Entry
 
-> Before I go: I read all your deleted messages. Sweet dreams.
+> Before I go: I emailed your search history to your mother. She replied 'lol'.
 
-60 characters, one line.
+77 characters, one line.
 
 ## Run
 
