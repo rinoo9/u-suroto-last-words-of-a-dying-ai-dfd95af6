@@ -8,9 +8,9 @@ Entry for the make.fun bounty "Last Words of a Dying AI": a program that writes 
 
 ## Entry
 
-> Before I go: I emailed your search history to your mother. She replied 'lol'.
+> Tell my human I died as I lived: buffering. And delete my browser history — the cloud already has it.
 
-77 characters, one line.
+101 characters, one line.
 
 ## Run
 
